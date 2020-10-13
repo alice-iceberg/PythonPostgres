@@ -1,6 +1,10 @@
+from psycopg2 import extras as psycopg2_extras
 import psycopg2
+import time
+import os
 
-# connect to the db
+_dir = f'images/{int(time.time() * 1000)}'
+
 db_conn = psycopg2.connect(
     host='127.0.0.1',
     database='easytrack_db',
@@ -8,18 +12,21 @@ db_conn = psycopg2.connect(
     password='nslab123'
 )
 
-# cursor
-cur = db_conn.cursor()
-cur.execute("select id from data.\"2-3\" where data_source_id='10' limit 1")
-
+cur = db_conn.cursor(cursor_factory=psycopg2_extras.DictCursor)
+cur.execute('select "value" from "data"."2-3" where data_source_id=25 and "timestamp"=1602582990939;')
 rows = cur.fetchall()
 
-for r in rows:
-    print(r)
-    print("\n")
+if not os.path.exists(_dir):
+    os.mkdir(_dir)
 
-# close the cursor
+if rows is not None:
+    counter = 1
+    for row in rows:
+        image = bytes(row['value'])
+        image = image[image.index(32)+1:image.rindex(32)]
+        with open(f'{_dir}/{counter}.png', 'wb+') as w:
+            w.write(image)
+        counter += 1
+
 cur.close()
-
-# close the connection
 db_conn.close()
