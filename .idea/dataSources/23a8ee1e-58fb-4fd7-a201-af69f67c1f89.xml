@@ -790,10 +790,10 @@ true posixrules
     <database id="2" parent="1" name="easytrack_db">
       <ObjectId>16393</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>497</IntrospectionStateNumber>
+      <IntrospectionStateNumber>527</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|16395|16397|1
-sequence|table|18141|18143|1
+sequence|table|18692|18694|1
 </Relations>
     </database>
     <database id="3" parent="1" name="postgres">
@@ -838,7 +838,7 @@ sequence|table|18141|18143|1
       <ObjectId>16394</ObjectId>
       <StateNumber>489</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>498</IntrospectionStateNumber>
+      <IntrospectionStateNumber>528</IntrospectionStateNumber>
     </schema>
     <schema id="14" parent="2" name="information_schema">
       <ObjectId>13018</ObjectId>
@@ -926,9 +926,9 @@ sequence|table|18141|18143|1
     <language id="27" parent="2" name="plpgsql"/>
     <language id="28" parent="2" name="sql"/>
     <sequence id="29" parent="13" name="2-3_id_seq">
-      <ObjectId>18141</ObjectId>
+      <ObjectId>18692</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>493</StateNumber>
+      <StateNumber>524</StateNumber>
       <DataType>integer|0s</DataType>
     </sequence>
     <sequence id="30" parent="13" name="2-5_id_seq">
@@ -938,10 +938,9 @@ sequence|table|18141|18143|1
       <DataType>integer|0s</DataType>
     </sequence>
     <table id="31" parent="13" name="2-3">
-      <ObjectId>18143</ObjectId>
-      <Outdated>1</Outdated>
+      <ObjectId>18694</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>493</StateNumber>
+      <StateNumber>524</StateNumber>
     </table>
     <table id="32" parent="13" name="2-5">
       <ObjectId>16397</ObjectId>
@@ -952,53 +951,53 @@ sequence|table|18141|18143|1
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>493</StateNumber>
+      <StateNumber>524</StateNumber>
       <DefaultExpression>nextval(&apos;data.&quot;2-3_id_seq&quot;&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
     <column id="34" parent="31" name="timestamp">
       <Position>2</Position>
       <DataType>bigint|0s</DataType>
-      <StateNumber>493</StateNumber>
+      <StateNumber>524</StateNumber>
       <TypeId>20</TypeId>
     </column>
     <column id="35" parent="31" name="value">
       <Position>3</Position>
       <DataType>bytea|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>493</StateNumber>
+      <StateNumber>524</StateNumber>
       <TypeId>17</TypeId>
     </column>
     <column id="36" parent="31" name="data_source_id">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>493</StateNumber>
+      <StateNumber>524</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <index id="37" parent="31" name="2-3_pkey">
-      <ObjectId>18150</ObjectId>
-      <StateNumber>493</StateNumber>
+      <ObjectId>18701</ObjectId>
+      <StateNumber>524</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
     <index id="38" parent="31" name="2-3_timestamp_data_source_id_key">
-      <ObjectId>18152</ObjectId>
-      <StateNumber>493</StateNumber>
+      <ObjectId>18703</ObjectId>
+      <StateNumber>524</StateNumber>
       <ColNames>timestamp
 data_source_id</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="39" parent="31" name="2-3_pkey">
-      <ObjectId>18151</ObjectId>
-      <StateNumber>493</StateNumber>
+      <ObjectId>18702</ObjectId>
+      <StateNumber>524</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>2-3_pkey</UnderlyingIndexName>
     </key>
     <key id="40" parent="31" name="2-3_timestamp_data_source_id_key">
-      <ObjectId>18153</ObjectId>
-      <StateNumber>493</StateNumber>
+      <ObjectId>18704</ObjectId>
+      <StateNumber>524</StateNumber>
       <ColNames>timestamp
 data_source_id</ColNames>
       <UnderlyingIndexName>2-3_timestamp_data_source_id_key</UnderlyingIndexName>
